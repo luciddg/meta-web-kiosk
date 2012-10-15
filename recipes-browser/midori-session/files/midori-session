@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Script that starts minimal Midori session on poky
+
+USER=root
+CONFIG="/home/$USER/.config/midori"
+EXEC=midori
+
+if [ -e $HOME/.mini_x/session ]
+then
+    exec $HOME/.mini_x/session
+fi
+
+if [ -e /etc/mini_x/session ]
+then
+    exec /etc/mini_x/session
+fi
+
+MINI_X_SESSION_DIR=/etc/mini_x/session.d
+
+# Execute session file on behalf of file owner
+for SESSIONFILE in $MINI_X_SESSION_DIR/*; do
+    set +e
+    USERNAME=`stat -c %U $SESSIONFILE`
+    sudo -b -i -u $USERNAME $SESSIONFILE&
+    set -e
+done
+
+
+xrandr -s 1024x768
+
+# Comment here if no proxy are needed
+sleep 2
+
+# Change the -a parameter to your desired homepage
+/usr/bin/midori -e Fullscreen -a www.yoctoproject.org \
+    -c $CONFIG -l $CONFIG/log &
+
+#/usr/bin/matchbox-terminal &
+
+exec matchbox-window-manager

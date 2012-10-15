@@ -1,0 +1,6 @@
+[settings]
+default-encoding=ISO-8859-1
+enable-html5-database=true
+proxy-type=MIDORI_PROXY_HTTP
+http-proxy=https://proxy-ir.intel.com
+http-proxy-port=911
