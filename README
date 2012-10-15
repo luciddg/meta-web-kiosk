@@ -1,0 +1,48 @@
+# META-WEB-KIOSK
+
+The layer contains a new bitbake target, core-image-web-kiosk, that automatically
+starts a Midori browser right after boot and enables the use of a virtual keyboard
+if there is support for it.
+
+
+# DEPENDENCIES
+
+The layer depends on the Poky metadata. For further information, please visit 
+the official Yocto Project website at:
+	http://www.yoctoproject.org
+
+
+# SETUP
+
+Add the following line in poky/meta/classes/core-image.bbclass
+PACKAGE_GROUP_x11-browser = "packagegroup-core-x11-browser"
+
+
+# PROXY CONFIGURATIONS
+
+If you are using the application inside a network that has proxy configuration,
+uncomment the lines in the /recipes-browser/midori-session/midori-session_0.1.bb.
+An example config file can be found in the files folder from recipes-browser/midori-session.
+
+
+# CHANGE THE HOMEPAGE OF THE BROWSER
+
+If you want to change the homepage for the browser, change -a parameter from
+/recipes-browser/midori-session/files/midori-session file.
+
+
+# ENABLE TOUCHSCREEN FOR qemux86
+
+If you want to test the image using runqemu be sure that the variable HAVE_KEYBOARD
+from poky/meta/recipes-bsb/formfactor/files/*arch*/machconfig is set to 0.
+[Change *arch* keyword with the machine you are testing e.g if you use a x86 machine
+*arch* will be qemux86]
+
+
+# LICENSE
+
+All metadata is MIT licensed unless otherwise stated. Source code included
+in tree for individual recipes is under the LICENSE stated in each recipe
+(.bb file) unless otherwise stated.
+
+This README document is Copyright (C) 2012 Intel Corporation.

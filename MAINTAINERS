@@ -1,0 +1,26 @@
+This file contains the maintainership information.
+
+Otherwise please post questions or updates to the Yocto Project
+General list (yocto@yoctoproject.org).
+
+  - look through recent entries of the Yocto mailing list archives
+    (https://lists.yoctoproject.org/pipermail/yocto/) to see if other
+    people have run into similar problems or had similar questions
+    answered.
+
+Descriptions of section entries:
+
+	M: Mail patches to: FullName <address@domain>
+	F: Files and directories with wildcard patterns.
+	   A trailing slash includes all files and subdirectory files.
+	   F:	meta-web-kiosk/	all files in and below meta-crownbay
+	   One pattern per line.  Multiple F: lines acceptable.
+
+Please keep this list in alphabetical order.
+
+Maintainers List (try to look for most precise areas first)
+
+		-----------------------------------
+meta-web-kiosk
+M:	Emilia Ciobanu <emilia.maria.silvia.ciobanu@intel.com>
+F:	meta-web-kiosk
