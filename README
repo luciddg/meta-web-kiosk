@@ -38,6 +38,24 @@ from poky/meta/recipes-bsb/formfactor/files/*arch*/machconfig is set to 0.
 [Change *arch* keyword with the machine you are testing e.g if you use a x86 machine
 *arch* will be qemux86]
 
+# BUILDING THE META-WEB-KIOSK LAYER
+
+After you download the meta-web-kiosk layer, be sure to add its location to the
+bblayer.conf file.
+
+BBLAYERS ?= "	\
+	/<path>/meta	\
+	/<path>/meta-yocto	\
+	/<path>/meta-web-kiosk	\
+"
+
+You should, now be able to build the new image
+	$ . ./oe-init-build-env
+	$ bitbake core-image-web-kiosk
+
+For further information visit the wiki page of the layer at
+https://wiki.yoctoproject.org/wiki/Web_Application_for_Interactive_Kiosk_Devices
+
 
 # LICENSE
 
