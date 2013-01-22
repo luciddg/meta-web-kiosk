@@ -26,8 +26,9 @@ for SESSIONFILE in $MINI_X_SESSION_DIR/*; do
     set -e
 done
 
-
-xrandr -s 1024x768
+# Modify here for the desired resolution
+# Full HD - 1920 x 1080
+#xrandr -s 1240x768
 
 # Comment here if no proxy are needed
 sleep 2
@@ -35,7 +36,5 @@ sleep 2
 # Change the -a parameter to your desired homepage
 /usr/bin/midori -e Fullscreen -a www.yoctoproject.org \
     -c $CONFIG -l $CONFIG/log &
-
-#/usr/bin/matchbox-terminal &
 
 exec matchbox-window-manager

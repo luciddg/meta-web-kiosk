@@ -14,8 +14,21 @@ the official Yocto Project website at:
 
 # SETUP
 
+The next steps suppose that you already have cloned the poky repository and the
+meta-web-kiosk layer.
+
 Add the following line in poky/meta/classes/core-image.bbclass
 PACKAGE_GROUP_x11-browser = "packagegroup-core-x11-browser"
+
+
+# DISPLAY CONFIGURATIONS
+
+You can customize your display resolution by uncommenting the following line
+from recipes-browser/midori-session/files/midori-session:
+	# Modify here for the desired resolution
+	# Full HD - 1920 x 1080
+	#xrandr -s 1240x768
+by changing the 1240x768 resolution with the one that you desire.
 
 
 # PROXY CONFIGURATIONS
@@ -62,5 +75,3 @@ https://wiki.yoctoproject.org/wiki/Web_Application_for_Interactive_Kiosk_Devices
 All metadata is MIT licensed unless otherwise stated. Source code included
 in tree for individual recipes is under the LICENSE stated in each recipe
 (.bb file) unless otherwise stated.
-
-This README document is Copyright (C) 2012 Intel Corporation.
