@@ -2,21 +2,6 @@
 #
 # Script that starts minimal Midori session on poky
 
-USER=root
-CONFIG="/home/$USER/.config/midori"
-LOGFILE="home/$USER/.config/midori/midori_log"
-EXEC=midori
-
-if [ -e $HOME/.mini_x/session ]
-then
-    exec $HOME/.mini_x/session
-fi
-
-if [ -e /etc/mini_x/session ]
-then
-    exec /etc/mini_x/session
-fi
-
 MINI_X_SESSION_DIR=/etc/mini_x/session.d
 
 # Execute session file on behalf of file owner
@@ -29,13 +14,11 @@ done
 
 # Modify here for the desired resolution
 # Full HD - 1920 x 1080
-#xrandr -s 1240x768
+#xrandr -s 1920x1080
+#sleep 2
 
-# Comment here if no proxy are needed
+/usr/bin/auto_restart_with_new_config.sh &
 sleep 2
-
-# Change the -a parameter to your desired homepage
-/usr/bin/midori -e Fullscreen \
-    -c $CONFIG &
+/usr/bin/change_midori_url.sh http://fff.cmiscm.com
 
 exec matchbox-window-manager

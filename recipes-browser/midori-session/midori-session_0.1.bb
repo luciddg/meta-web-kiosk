@@ -5,14 +5,17 @@ BUGTRACKER = "http://bugzilla.pokylinux.org"
 PR = "r4"
 
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://midori-session;endline=5;md5=8a71b7d46689f813bdaad08fe4293361   \
-                    file://config;endline=5;md5=aa9057df58ed4fd307e684ddbefd1482  \
+LIC_FILES_CHKSUM = "file://midori-session;endline=5;md5=6b723371204b61cd4b9c0679ecfdc1ea   \
                     "
 
 SECTION = "x11"
 RCONFLICTS_${PN} = "matchbox-common"
 
-SRC_URI = "file://midori-session file://config"
+SRC_URI = "file://midori-session \
+           file://auto_restart_with_new_config.sh \
+           file://change_midori_url.sh \
+           file://config \
+          "
 S = "${WORKDIR}"
 
 inherit update-alternatives
@@ -27,8 +30,8 @@ ALTERNATIVE_PRIORITY = "50"
 do_install() {
         install -d ${D}/${bindir}
         install -m 0755 ${S}/midori-session ${D}/${bindir}
-        # Uncomment the following lines if the network has proxy
-        # configurations
+        install -m 0755 ${S}/auto_restart_with_new_config.sh ${D}/${bindir}
+        install -m 0755 ${S}/change_midori_url.sh ${D}/${bindir}
         install -d ${D}/home/${USER}/.config/${BROWSER}/
         install ${S}/config ${D}/home/${USER}/.config/${BROWSER}/
 }

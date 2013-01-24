@@ -1,8 +1,5 @@
 [settings]
 default-encoding=ISO-8859-1
-proxy-type=MIDORI_PROXY_HTTP
-http-proxy=network_proxy
-http-proxy-port=proxy_port
 load-on-startup=MIDORI_STARTUP_HOMEPAGE
 homepage=https://www.yoctoproject.org
 maximum-cookie-age=0
@@ -10,3 +7,8 @@ maximum-history-age=0
 always-show-tabbar=false
 close-buttons-on-tabs=false
 open-new-pages-in=MIDORI_NEW_PAGE_CURRENT
+enable-html5-database=true
+enable-plugins=true
+#proxy-type=MIDORI_PROXY_HTTP
+#http-proxy=proxy_address
+#http-proxy-port=port_number
