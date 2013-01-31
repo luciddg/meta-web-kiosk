@@ -1,11 +1,10 @@
 [settings]
 default-encoding=ISO-8859-1
-enable-html5-database=true
 proxy-type=MIDORI_PROXY_HTTP
 http-proxy=network_proxy
 http-proxy-port=proxy_port
 load-on-startup=MIDORI_STARTUP_HOMEPAGE
-homepage=www.yoctoproject.org
+homepage=https://www.yoctoproject.org
 maximum-cookie-age=0
 maximum-history-age=0
 always-show-tabbar=false

@@ -3,7 +3,7 @@
 # Script that starts minimal Midori session on poky
 
 USER=root
-CONFIG="/home/$USER/.config/midori/config"
+CONFIG="/home/$USER/.config/midori"
 LOGFILE="home/$USER/.config/midori/midori_log"
 EXEC=midori
 
@@ -36,6 +36,6 @@ sleep 2
 
 # Change the -a parameter to your desired homepage
 /usr/bin/midori -e Fullscreen \
-    -c $CONFIG -l $LOGFILE &
+    -c $CONFIG &
 
 exec matchbox-window-manager

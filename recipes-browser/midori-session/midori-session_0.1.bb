@@ -6,7 +6,7 @@ PR = "r4"
 
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://midori-session;endline=5;md5=8a71b7d46689f813bdaad08fe4293361   \
-                    file://config;endline=5;md5=af9f64a7fada0e62a23995d7ea534a71    \
+                    file://config;endline=5;md5=aa9057df58ed4fd307e684ddbefd1482  \
                     "
 
 SECTION = "x11"
