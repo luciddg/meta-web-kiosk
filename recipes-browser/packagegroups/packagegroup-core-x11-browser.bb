@@ -21,5 +21,4 @@ RDEPENDS_${PN} = "\
     midori-session  \
     liberation-fonts \
     midori  \
-    connman \
     "
