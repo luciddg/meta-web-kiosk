@@ -17,8 +17,9 @@ the official Yocto Project website at:
 The next steps suppose that you already have cloned the poky repository and the
 meta-web-kiosk layer.
 
-Add the following line in poky/meta/classes/core-image.bbclass
+Add the following lines to poky/meta/classes/core-image.bbclass
 PACKAGE_GROUP_x11-browser = "packagegroup-core-x11-browser"
+PACKAGE_GROUP_kiosk-manager = "packagegroup-core-kiosk-manager"
 
 
 # DISPLAY CONFIGURATIONS
