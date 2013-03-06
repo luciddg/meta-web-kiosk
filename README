@@ -63,9 +63,10 @@ BBLAYERS ?= "	\
 	/<path>/meta-web-kiosk	\
 "
 
-You should, now be able to build the new image
+You should, now be able to build the new images
 	$ . ./oe-init-build-env
 	$ bitbake core-image-web-kiosk
+	$ bitbake core-image-kiosk-manager
 
 For further information visit the wiki page of the layer at
 https://wiki.yoctoproject.org/wiki/Web_Application_for_Interactive_Kiosk_Devices
