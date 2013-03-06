@@ -7,4 +7,5 @@ inherit packagegroup
 
 RDEPENDS_${PN} = "\
     kiosk-manager-scripts \
+    ssh-keys-client \
     "
