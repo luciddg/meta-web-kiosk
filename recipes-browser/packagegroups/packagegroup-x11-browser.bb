@@ -11,11 +11,6 @@ RREPLACES_${PN} = "task-core-x11-mini task-core-x11-browser"
 RCONFLICTS_${PN} = "task-core-x11-mini task-core-x11-browser"
 
 RDEPENDS_${PN} = "\
-    packagegroup-core-x11-xserver \
-    packagegroup-core-x11-utils \
-    dbus \
-    pointercal \
-    matchbox-wm \
     matchbox-keyboard   \
     matchbox-keyboard-im    \
     midori-session  \
