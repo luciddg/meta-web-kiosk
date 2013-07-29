@@ -38,6 +38,7 @@ TARGET_CC_ARCH += "${LDFLAGS}"
 
 do_install() {
     oe_runmake DESTDIR=${D} install
+    rmdir ${D}${datadir}/gir-1.0
 }
 
 RRECOMMENDS_${PN} += "glib-networking ca-certificates gnome-icon-theme"
