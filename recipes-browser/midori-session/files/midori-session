@@ -17,8 +17,13 @@ done
 #xrandr -s 1920x1080
 #sleep 2
 
+# Disable Screen saver and blanking
+xset s off
+xset s noblank
+xset -dpms
+
 /usr/bin/auto_restart_with_new_config.sh &
 sleep 2
-/usr/bin/change_midori_url.sh http://fff.cmiscm.com
+/usr/bin/change_midori_url.sh http://www.yoctoproject.org
 
 exec matchbox-window-manager
