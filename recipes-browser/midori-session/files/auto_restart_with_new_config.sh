@@ -2,9 +2,7 @@
 KICKFILE="/home/root/.config/midori/kick-new-midori-config"
 CONFIGFILE="/home/root/.config/midori/config"
 CONFIGDIR="/home/root/.config/midori"
-LOGFILE="/home/root/.config/midori/midori_log"
-PIDFILE="/home/root/.config/midori/midori_log"
-MIDORICOMMAND="/usr/bin/midori -e Fullscreen -c ${CONFIGDIR} -l ${LOGFILE}"
+MIDORICOMMAND="/usr/bin/midori -e Fullscreen -c ${CONFIGDIR}"
 CHECKDELAY=1
 
 while true

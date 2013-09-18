@@ -5,7 +5,7 @@ BUGTRACKER = "http://bugzilla.pokylinux.org"
 PR = "r4"
 
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://midori-session;endline=5;md5=6b723371204b61cd4b9c0679ecfdc1ea   \
+LIC_FILES_CHKSUM = "file://midori-session;endline=5;md5=caa15bc7675a9d01becce7b6d24a8861 \
                     "
 
 SECTION = "x11"

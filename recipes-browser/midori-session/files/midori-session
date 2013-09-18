@@ -2,15 +2,17 @@
 #
 # Script that starts minimal Midori session on poky
 
-MINI_X_SESSION_DIR=/etc/mini_x/session.d
+MIDORI_SESSION_DIR=/etc/mini_x/session.d
 
 # Execute session file on behalf of file owner
-for SESSIONFILE in $MINI_X_SESSION_DIR/*; do
-    set +e
-    USERNAME=`stat -c %U $SESSIONFILE`
-    sudo -b -i -u $USERNAME $SESSIONFILE&
-    set -e
-done
+if [ -d $MIDORI_SESSION_DIR ]; then
+    for SESSIONFILE in $MIDORI_SESSION_DIR/*; do
+	set +e
+	USERNAME=`stat -c %U $SESSIONFILE`
+	sudo -b -i -u $USERNAME $SESSIONFILE&
+	set -e
+    done
+fi
 
 # Modify here for the desired resolution
 # Full HD - 1920 x 1080
