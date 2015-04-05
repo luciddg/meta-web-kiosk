@@ -1,7 +1,10 @@
 #!/bin/sh
 
-KICKFILE="/home/root/.config/midori/kick-new-midori-config"
-CONFIGFILE="/home/root/.config/midori/config"
+KICKFILE="/var/run/midori/kick-new-midori-config"
+CONFIGFILE="/var/run/midori/config"
+
+# We need to change cwd to somewhere writeable for sed -i
+cd /var/run/midori/
 
 usage()
 {

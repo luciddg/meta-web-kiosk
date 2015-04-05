@@ -32,8 +32,8 @@ do_install() {
         install -m 0755 ${S}/midori-session ${D}/${bindir}
         install -m 0755 ${S}/auto_restart_with_new_config.sh ${D}/${bindir}
         install -m 0755 ${S}/change_midori_url.sh ${D}/${bindir}
-        install -d ${D}/home/${USER}/.config/${BROWSER}/
-        install ${S}/config ${D}/home/${USER}/.config/${BROWSER}/
+        install -d ${D}/etc/${BROWSER}/
+        install ${S}/config ${D}/etc/${BROWSER}
 }
 
-FILES_${PN} += "/home/${USER}/.config/${BROWSER}/config"
+FILES_${PN} += "/etc/${BROWSER}/config"

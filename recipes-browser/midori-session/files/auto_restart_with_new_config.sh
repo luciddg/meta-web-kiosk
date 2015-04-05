@@ -1,7 +1,7 @@
 #!/bin/sh
-KICKFILE="/home/root/.config/midori/kick-new-midori-config"
-CONFIGFILE="/home/root/.config/midori/config"
-CONFIGDIR="/home/root/.config/midori"
+KICKFILE="/var/run/midori/kick-new-midori-config"
+CONFIGFILE="/var/run/midori/config"
+CONFIGDIR="/var/run/midori"
 MIDORICOMMAND="/usr/bin/midori -e Fullscreen -c ${CONFIGDIR}"
 CHECKDELAY=1
 
