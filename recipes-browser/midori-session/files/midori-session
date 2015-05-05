@@ -2,6 +2,8 @@
 #
 # Script that starts minimal Midori session on poky
 
+CONFIGDIR=/var/run/midori
+CONFIGFILE=/var/run/midori/config
 MIDORI_SESSION_DIR=/etc/mini_x/session.d
 
 # Execute session file on behalf of file owner
@@ -34,6 +36,6 @@ xset -dpms
 
 /usr/bin/auto_restart_with_new_config.sh &
 sleep 2
-/usr/bin/change_midori_url.sh https://www.yoctoproject.org
+/usr/bin/midori -e Fullscreen -c $CONFIGDIR &
 
 exec matchbox-window-manager

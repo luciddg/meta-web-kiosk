@@ -3,7 +3,7 @@ KICKFILE="/var/run/midori/kick-new-midori-config"
 CONFIGFILE="/var/run/midori/config"
 CONFIGDIR="/var/run/midori"
 MIDORICOMMAND="/usr/bin/midori -e Fullscreen -c ${CONFIGDIR}"
-CHECKDELAY=1
+CHECKDELAY=60
 
 while true
 do
