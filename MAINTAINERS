@@ -24,3 +24,7 @@ Maintainers List (try to look for most precise areas first)
 meta-web-kiosk
 M:	Emilia Ciobanu <emilia.maria.silvia.ciobanu@intel.com>
 F:	meta-web-kiosk
+
+meta-web-kiosk, Lucid Design Group (luciddg) fork
+M:      Brandon Matthews <bmatt@luciddg.com>
+F:      meta-web-kiosk
